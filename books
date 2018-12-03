@@ -1,0 +1,173 @@
+books class
+        private string isbn;
+        private string title;
+        private string author;
+        private int yearPublished;
+        private int numCopies;
+
+        public books(string thetitle, string theauthor, string theyear, string theCopies, string theisbn)
+        {
+            isbn = theisbn;
+            title = thetitle;
+            author = theauthor;
+            setyear(theyear);
+            setCopies(theCopies);
+        }
+
+        public string getTitle()
+        {
+            return title;
+        }
+
+        public string Getauthor()
+        {
+            return author;
+        }
+        public int getYear()
+        {
+            return yearPublished;
+        }
+        public string getIsbn()
+        {
+            return isbn;
+        }
+        public int getCopies()
+        {
+            return numCopies;
+        }
+
+        public void setTilte(string intitle)
+        {
+            title = intitle;
+        }
+        public void setauthor(string inauthor)
+        {
+            author = inauthor;
+        }
+        public void setyear(string inYear)
+        {
+            try
+            {
+                yearPublished = Convert.ToInt32(inYear);
+            }
+            catch(FormatException e)
+            {
+                System.Windows.Forms.MessageBox.Show("ERROR" + e.Message + "please input a valid year");
+            }
+        }
+        public void setisbn(string inisbn)
+        {
+            isbn= inisbn;
+        }
+        public void setCopies(string inCopies)
+        {
+            try
+            {
+                yearPublished = Convert.ToInt32(inCopies);
+            }
+            catch (FormatException e)
+            {
+                System.Windows.Forms.MessageBox.Show("ERROR" + e.Message + "please input a valid number of copies");
+            }
+        }
+        
+        
+        
+        
+        library class
+        private string libname;
+        private int libstreetnum;
+        private string libstreet;
+        private string libcity;
+        private string libcounty;
+        private string libpostcode;
+        private string libemailaddress;
+        int libnumbooks;
+        books[] liballbooks;
+
+        public library(string inlibname, int inlibstreetnum, string inlibstreet,
+                       string inlibcity, string inlibcounty, string inlibpostcode,
+                       string inlibemailaddress, int inlibtitles, books[] inlibbooks)
+        {
+            libname = inlibname;
+            libstreetnum = inlibstreetnum;
+            libstreet = inlibstreet;
+            libcity = inlibcity;
+            libcounty = inlibcounty;
+            libpostcode = inlibpostcode;
+            libemailaddress = inlibemailaddress;
+            libnumbooks = inlibtitles;
+            liballbooks = inlibbooks;
+        }
+        public library(string inlibname, int inlibstreetnum, string inlibstreet,
+                      string inlibcity, string inlibcounty, string inlibpostcode,
+                      string inlibemailaddress)
+        {
+            libname = inlibname;
+            libstreetnum = inlibstreetnum;
+            libstreet = inlibstreet;
+            libcity = inlibcity;
+            libcounty = inlibcounty;
+            libpostcode = inlibpostcode;
+            libemailaddress = inlibemailaddress;
+            libnumbooks = 0;
+            liballbooks = null;
+        }
+
+        public string getlibname()
+        {
+            return libname;
+        }
+        public int getlibstreetnum()
+        {
+            return libstreetnum;
+        }
+        public string getlibstreet()
+        {
+            return libstreet;
+        }
+        public string getlibcity()
+        {
+            return libcity;
+        }
+        public string getlibcounty()
+        {
+            return libcounty;
+        }
+        public string getlibpostcode()
+        {
+            return libpostcode;
+        }
+        public string getlibemailaddress()
+        {
+            return libemailaddress;
+        }
+
+        public void setlibname(string inlibname)
+        {
+            libname = inlibname;
+        }
+        public void setlibstreetnum(int inlibstreetnum)
+        {
+            libstreetnum = inlibstreetnum;
+        }
+        public void setlibstreet(string inlibstreet)
+        {
+            libstreet = inlibstreet;
+        }
+        public void setlibcity(string inlibcity)
+        {
+            libcity = inlibcity;
+        }
+        public void setlibcounty(string inlibcounty)
+        {
+            libcounty = inlibcounty;
+        }
+        public void setlibpostcode(string inlibpostcode)
+        {
+            libpostcode = inlibpostcode;
+        }
+        public void setlibemail(string inlibemailaddress)
+        {
+            libemailaddress = inlibemailaddress;
+        }
