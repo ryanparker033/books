@@ -1,0 +1,23 @@
+StreamReader input = new StreamReader(filename);
+            while (!input.EndOfStream)
+            {
+                inlibname = input.ReadLine();
+                inlibstreetnum = Convert.ToInt32(input.ReadLine());
+                inlibstreet = input.ReadLine();
+                inlibcity = input.ReadLine();
+                inlibcounty = input.ReadLine();
+                inlibpostcode = input.ReadLine();
+                inlibemailladdress = input.ReadLine();
+                int numberBooks = Convert.ToInt32(input.ReadLine());
+                books[] tempArrayBooks = new books[numberBooks];
+                for (int i = 0; i < numberBooks; i++)
+                {
+                    intitle = input.ReadLine();
+                    inauthor = input.ReadLine();
+                    inyear = Convert.ToInt32(input.ReadLine());
+                    incopies = Convert.ToInt32(input.ReadLine());
+                    inisbn = input.ReadLine();
+                    books tempbook = new books(.....);
+                    tempArrayBooks[i] = tempbook;
+                    
+                }
